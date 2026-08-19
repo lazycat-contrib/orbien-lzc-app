@@ -24,7 +24,7 @@ images:
     source: ghcr.io/orbien-org/orbien-server
     channel: stable
     sort: semver
-    tag_regex: '^v?3\\.\\d+\\.\\d+$'
+    tag_regex: '^v?3\.\d+\.\d+$'
     delivery:
       mode: lazycat
 
