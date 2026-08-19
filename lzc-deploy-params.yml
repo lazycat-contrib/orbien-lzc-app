@@ -1,0 +1,33 @@
+params:
+  - id: orbien_token
+    type: secret
+    name: "Orbien Token"
+    description: "Authentication token used by Orbien tunnel clients"
+    optional: false
+
+  - id: dashboard_user
+    type: string
+    name: "Dashboard User"
+    description: "Username for the Orbien web dashboard"
+    default_value: "admin"
+    optional: false
+
+  - id: dashboard_password
+    type: secret
+    name: "Dashboard Password"
+    description: "Password for the Orbien web dashboard"
+    default_value: "$random(len=20)"
+    optional: false
+
+locales:
+  zh:
+    orbien_token:
+      name: "Orbien Token"
+      description: "Orbien 客户端连接使用的认证 Token"
+    dashboard_user:
+      name: "面板用户名"
+      description: "Orbien Web 管理面板用户名"
+    dashboard_password:
+      name: "面板密码"
+      description: "Orbien Web 管理面板密码"
+

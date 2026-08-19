@@ -1,0 +1,17 @@
+package: community.lazycat.app.orbien
+version: 3.1.0
+name: Orbien
+description: "A lightweight, high-performance tunnel server with a web dashboard."
+min_os_version: 1.5.0
+author: orbien-org
+license: Apache-2.0
+homepage: https://github.com/orbien-org/orbien
+
+locales:
+  zh:
+    name: "Orbien 内网穿透"
+    description: "轻量高性能的内网穿透服务，提供 Web 管理面板。"
+  en:
+    name: "Orbien"
+    description: "A lightweight, high-performance tunnel server with a web dashboard."
+

@@ -1,0 +1,11 @@
+listen = "{{env.ORBIEN_LISTEN:0.0.0.0:9527}}"
+
+[auth]
+token = "{{env.ORBIEN_TOKEN}}"
+
+[dashboard]
+addr = "0.0.0.0"
+port = 8020
+user = "{{env.DASHBOARD_USER:admin}}"
+password = "{{env.DASHBOARD_PASSWORD:123456}}"
+
