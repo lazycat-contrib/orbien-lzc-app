@@ -3,6 +3,7 @@ params:
     type: secret
     name: "Orbien Token"
     description: "Authentication token used by Orbien tunnel clients"
+    default_value: "$random(len=32)"
     optional: false
 
   - id: dashboard_user
