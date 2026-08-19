@@ -19,11 +19,11 @@ application:
           params:
             user: "{{ .U.dashboard_user }}"
             password: "{{ .U.dashboard_password }}"
-
 services:
   orbien-server:
     # ghcr.io/orbien-org/orbien-server:3.1.0
-    image: ghcr.io/orbien-org/orbien-server:3.1.0
+    # upstream: ghcr.io/orbien-org/orbien-server:3.1.0
+    image: registry.lazycat.cloud/czyt/orbien-org/orbien-server:6b96d77409522b94
     restart: unless-stopped
     environment:
       ORBIEN_TOKEN: "{{ .U.orbien_token }}"
@@ -32,7 +32,5 @@ services:
     setup_script: |
       install -d -m 0755 /etc/orbien
       cp /lzcapp/pkg/content/orbien-server.toml /etc/orbien/orbien-server.toml
-
 usage: |
   Open the Orbien dashboard from the application entry. Configure the tunnel token and dashboard credentials during deployment. TCP and UDP tunnel traffic is exposed on port 9527.
-
