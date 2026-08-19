@@ -11,14 +11,13 @@ application:
     - port: 9527
       protocol: udp
   injects:
-    - id: dashboard-login-autofill
+    - id: dashboard-basic-auth
+      on: request
+      auth_required: false
       when:
         - /*
-      do:
-        - src: builtin://simple-inject-password
-          params:
-            user: "{{ .U.dashboard_user }}"
-            password: "{{ .U.dashboard_password }}"
+      do: |
+        ctx.headers.set("Authorization", "Basic " + ctx.base64.encode("{{ .U.dashboard_user }}:{{ .U.dashboard_password }}"));
 services:
   orbien-server:
     # ghcr.io/orbien-org/orbien-server:3.1.0
