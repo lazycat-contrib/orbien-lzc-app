@@ -1,5 +1,5 @@
 package: community.lazycat.app.orbien
-version: 3.6.1
+version: 3.7.0
 name: Orbien
 description: "A lightweight, high-performance tunnel server with a web dashboard."
 min_os_version: 1.5.0
